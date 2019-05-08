@@ -23,12 +23,11 @@ sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-per
 # 5. Install Gem5
 	Run the command on your terminal to download and install Gem5.
 
-hg clone http://repo.gem5.org/gem5
+	hg clone http://repo.gem5.org/gem5
 
 # 6. Compile and Check Gem5
 	Run the following commands:
 1.	Go into gem5 Directory
-
 	cd ~/gem5
 
 2.	Build the ISA (we build X86 ISA)
