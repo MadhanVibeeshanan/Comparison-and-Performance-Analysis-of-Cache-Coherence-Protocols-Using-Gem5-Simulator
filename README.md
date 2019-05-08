@@ -1,6 +1,7 @@
 # Comparions-and-Performance-Analysis-of-Cache-Coherence-Protocols-Using-Gem5-Simulator
 # CSCI 5593 - Advanced Computer Architecture
-	Gem5 was installed and used on a dual boot Ubuntu OS during the project. You can also use Ubuntu in a VM, but building the binaries will take a lot of time.
+	Gem5 was installed and used on a dual boot Ubuntu OS during the project. 
+	You can also use Ubuntu in a VM, but building the binaries will take a lot of time.
 
 # 1. Download and Install VM:
 
@@ -10,55 +11,60 @@
 
 # 2. Download Ubuntu 16.04:
 
-	http://releases.ubuntu.com/16.04/
+**http://releases.ubuntu.com/16.04/**
 
 # 3. Install Ubuntu 16.04 on VM:
 
-	Follow the instructions given in the link provided below to install Ubuntu 16.04 on your VM
+	Follow the instructions given in the link provided below to install Ubuntu 16.04 on your VM:
 	
-	https://medium.com/@tushar0618/install-ubuntu-16-04-lts-on-virtual-box-desktop-version-30dc6f1958d0
+**https://medium.com/@tushar0618/install-ubuntu-16-04-lts-on-virtual-box-desktop-version-30dc6f1958d0**
 
 # 4. Install dependent packages:
 
 	Before installing gem5, run the following command on your Ubuntu terminal to resolve package dependencies:
 
-	#sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++
+**sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++**
 
-# 5. Install Gem5
-	Run the command on your terminal to download and install Gem5.
+# 5. Install Gem5:
+	Run the command on your terminal to download and install Gem5:
 
-	hg clone http://repo.gem5.org/gem5
+**hg clone http://repo.gem5.org/gem5**
 
 # 6. Compile and Check Gem5
 	Run the following commands:
-1.	Go into gem5 Directory
-	cd ~/gem5
+	
+	1.	Go into gem5 Directory
+	
+**cd ~/gem5**
 
-2.	Build the ISA (we build X86 ISA)
+	2.	Build the ISA (we build X86 ISA):
+	
+		The number following -j represents the number of coresthat your system has. 
+		This build process will take around 20 minutes based on the number of cores that you have
 
-	scons build/X86/gem5.opt -j8
+**scons build/X86/gem5.opt -j8**
 
-The number following -j represents the number of cores
-that your system has. This build process will take around 20 minutes based on the number of cores that you have.
-
-3.	Test if gem5 works
-
-build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello
-
-If you get Hello World! as your output, then the build is successful.
+	
+	3.	Test if gem5 works:
+	
+		If you get Hello World! as your output, then the build is successful.
+		
+**build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello**
 
 # 7. Testing MOESI Protocol in Classic model
-1.	Go into gem5 Directory if you are in any other directory
-	cd ~/gem5
+	1.	Go into gem5 Directory if you are in any other directory.
+	
+**cd ~/gem5**
 
-2.	Build the X86 ISA:
-scons build/X86/gem5.opt -j8
+	2.	Build the X86 ISA:
+		By default Gem5 takes classic memory model with MOESI cache coherence protocol.
 
-By default Gem5 takes classic memory model with MOESI cache coherence protocol.
+**scons build/X86/gem5.opt -j8**
 
-3.	To run classic model on gem5 with different L1 cache size and block size.
-a.	Open memtest.py found on the following directory: 
-./configs/example/memtest.py
+
+	3.	To run classic model on gem5 with different L1 cache size and block size.
+		a.	Open memtest.py found on the following directory: 
+**./configs/example/memtest.py**
 
 b.	Change the L1 cache size, found on line 183
 	Change sizes to one of these: 16kB,32kb,64kB and 128kB and follow step 4 and 5.
