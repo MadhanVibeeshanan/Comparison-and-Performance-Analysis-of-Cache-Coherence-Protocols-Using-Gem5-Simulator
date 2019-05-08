@@ -1,24 +1,28 @@
 # Comparions-and-Performance-Analysis-of-Cache-Coherence-Protocols-Using-Gem5-Simulator
 # CSCI 5593 - Advanced Computer Architecture
+	Gem5 was installed and used on a dual boot Ubuntu OS during the project. You can also use Ubuntu in a VM, but building the binaries will take a lot of time.
 
-Gem5 was installed and used on a dual boot Ubuntu OS during the project. You can also use Ubuntu in a VM, but building the binaries will take a lot of time.
+# 1. Download and Install VM:
 
-# 1. Download and Install VM
 	The link provided below will help you to install VM:
+	
+	https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/
 
-Link:https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/
+# 2. Download Ubuntu 16.04:
 
-# 2. Download Ubuntu 16.04
-	Link: http://releases.ubuntu.com/16.04/
+	http://releases.ubuntu.com/16.04/
 
-# 3. Install Ubuntu 16.04 on VM
+# 3. Install Ubuntu 16.04 on VM:
+
 	Follow the instructions given in the link provided below to install Ubuntu 16.04 on your VM
-	Link:https://medium.com/@tushar0618/install-ubuntu-16-04-lts-on-virtual-box-desktop-version-30dc6f1958d0
+	
+	https://medium.com/@tushar0618/install-ubuntu-16-04-lts-on-virtual-box-desktop-version-30dc6f1958d0
 
-# 4. Install dependent packages
+# 4. Install dependent packages:
+
 	Before installing gem5, run the following command on your Ubuntu terminal to resolve package dependencies:
 
-sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++
+	#sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++
 
 # 5. Install Gem5
 	Run the command on your terminal to download and install Gem5.
