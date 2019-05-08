@@ -87,7 +87,7 @@
 			./build/X86/gem5.opt configs/example/memtest.py -h
 
 			The parameters -l, -c and -t can be varied as per requirement. But we used the following to test 
-		the classic model. 
+			the classic model. 
  
  			./build/X86/gem5.opt configs/example/memtest.py -l 100000 -c 4:1 -t 3:2:1
 
