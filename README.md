@@ -23,48 +23,50 @@
 
 	Before installing gem5, run the following command on your Ubuntu terminal to resolve package dependencies:
 
-**sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++**
+		sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++
 
 # 5. Install Gem5:
 	Run the command on your terminal to download and install Gem5:
 
-**hg clone http://repo.gem5.org/gem5**
+		hg clone http://repo.gem5.org/gem5
 
 # 6. Compile and Check Gem5
 	Run the following commands:
 	
 	1.	Go into gem5 Directory
 	
-**cd ~/gem5**
+			cd ~/gem5
 
 	2.	Build the ISA (we build X86 ISA):
 	
 		The number following -j represents the number of coresthat your system has. 
 		This build process will take around 20 minutes based on the number of cores that you have
 
-**scons build/X86/gem5.opt -j8**
+			scons build/X86/gem5.opt -j8
 
 	
 	3.	Test if gem5 works:
 	
 		If you get Hello World! as your output, then the build is successful.
 		
-**build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello**
+			build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello
 
 # 7. Testing MOESI Protocol in Classic model
 	1.	Go into gem5 Directory if you are in any other directory.
-	
-**cd ~/gem5**
+		
+			cd ~/gem5
 
 	2.	Build the X86 ISA:
 		By default Gem5 takes classic memory model with MOESI cache coherence protocol.
-
-**scons build/X86/gem5.opt -j8**
+		
+			scons build/X86/gem5.opt -j8
 
 
 	3.	To run classic model on gem5 with different L1 cache size and block size.
+	
 		a.	Open memtest.py found on the following directory: 
-			**./configs/example/memtest.py**
+			
+				./configs/example/memtest.py
 
 b.	Change the L1 cache size, found on line 183
 	Change sizes to one of these: 16kB,32kb,64kB and 128kB and follow step 4 and 5.
