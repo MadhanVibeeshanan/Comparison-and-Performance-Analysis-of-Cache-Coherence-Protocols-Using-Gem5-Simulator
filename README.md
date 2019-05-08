@@ -42,14 +42,14 @@
 
 	2.	Build the ISA (we build X86 ISA):
 	
-		The number following -j represents the number of coresthat your system has. This build process will 
+			The number following -j represents the number of coresthat your system has. This build process will 
 		take around 20 minutes based on the number of cores that you have
 
 			scons build/X86/gem5.opt -j8
 	
 	3.	Test if gem5 works:
 	
-		If you get Hello World! as your output, then the build is successful.
+			If you get Hello World! as your output, then the build is successful.
 		
 			build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello
 
@@ -61,7 +61,7 @@
 
 	2.	Build the X86 ISA:
 	
-		By default Gem5 takes classic memory model with MOESI cache coherence protocol.
+			By default Gem5 takes classic memory model with MOESI cache coherence protocol.
 		
 			scons build/X86/gem5.opt -j8
 
@@ -82,45 +82,50 @@
 
 	4.	Run the following command to execute:
 	
-		The details of the parameters can be found if we run the following command.
+			The details of the parameters can be found if we run the following command.
 	
 			./build/X86/gem5.opt configs/example/memtest.py -h
 
-		The parameters -l, -c and -t can be varied as per requirement. But we used the following to test 
+			The parameters -l, -c and -t can be varied as per requirement. But we used the following to test 
 		the classic model. 
  
  			./build/X86/gem5.opt configs/example/memtest.py -l 100000 -c 4:1 -t 3:2:1
 
 	5.	Output file will be found in the following directory:
-
+	
+			We used the data through bus values from the text file to test the varying L1 cache size and 
+			varying block size.
+			
 			./m5out/stats.txt
 
-		We used the data through bus values from the text file to test the varying L1 cache size and varying block size.
+		
 
 # 8. Setting up SPEC 2017:
 
 	Use the below given link to run and compile Spec 2017:
+	
 **https://www.spec.org/cpu2017/Docs/install-guide-unix.html**
 
 # 9. Integrating SPEC 2017 with Gem5:
 
-	1.	Copy spec.sh  to ~/gem5/
+	1.	Copy spec.sh to ~/gem5/
 		
 		File path of spec.sh will be :
+		
 			~/gem5/spec.sh
 
 	2.	Replace the given se.py with the given se.py
-	
-		File location: 
+		
 			~/gem5/configs/example/se.py
 
-	3.	Copy the benchmarks.py to the below file location
-		File location: 
+	3.	Copy the benchmarks.py to the below file location:
+	 
 			~/gem5/configs/example/benchmarks.py
 
 	4.	Run the following commands:
 	
 		a.	cd ~/gem5
+		
 		b.	chmod +x spec.sh
 	
 # 10. Testing different protocols in Ruby model:
@@ -129,10 +134,10 @@
 	
 	1.	To compile gem5:
 	
-			scons build/X86/gem5.opt RUBY=True PROTOCOL=MESI_Three_Level -j8
-
-		Change the PROTOCOL to one of these : MESI_Two_Level, MESI_Three_Level, MOESI_CMP_token, MOESI_CMP_directory 
+			Change the PROTOCOL to one of these : MESI_Two_Level, MESI_Three_Level, MOESI_CMP_token, MOESI_CMP_directory 
 		to test different protocols
+	
+			scons build/X86/gem5.opt RUBY=True PROTOCOL=MESI_Three_Level -j8
 
 	2.	Open spec.sh found in ~/gem5/
 
@@ -142,11 +147,11 @@
 	4.	Use the following command to run the spec.sh  file. Before running the script, make sure you are in the
 		correct directory (~/gem5/)
 		
-		./spec.sh <name_of_benchmark> <output_directory>
+			./spec.sh <name_of_benchmark> <output_directory>
 
 		Eg: ./spec.sh leela /home/aca/gem5/output_dir/
 
-		The different benchmarks that can be used are leela, exchange2, imagick, povray and lbm.
+			The different benchmarks that can be used are leela, exchange2, imagick, povray and lbm.
 
 	5.	The results of the benchmarks will be found in the output directory as stats.txt file. The required data can 
 		be got from this file.
