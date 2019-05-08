@@ -134,15 +134,15 @@
 	
 	1.	To compile gem5:
 	
-			Change the PROTOCOL to one of these : MESI_Two_Level, MESI_Three_Level, MOESI_CMP_token, MOESI_CMP_directory 
-		to test different protocols
+			Change the PROTOCOL to one of these : MESI_Two_Level, MESI_Three_Level, MOESI_CMP_token, 
+		MOESI_CMP_directory to test different protocols
 	
 			scons build/X86/gem5.opt RUBY=True PROTOCOL=MESI_Three_Level -j8
 
 	2.	Open spec.sh found in ~/gem5/
 
-	3.	The run command will be found at the last line of the spec.sh file. Make changes like changing the l1d_size, 
-		l1i_size and so on here before running the shell script.
+	3.	The run command will be found at the last line of the spec.sh file. Make changes like changing the 
+		l1d_size, l1i_size and so on here before running the shell script.
 
 	4.	Use the following command to run the spec.sh  file. Before running the script, make sure you are in the
 		correct directory (~/gem5/)
@@ -153,6 +153,6 @@
 
 			The different benchmarks that can be used are leela, exchange2, imagick, povray and lbm.
 
-	5.	The results of the benchmarks will be found in the output directory as stats.txt file. The required data can 
-		be got from this file.
+	5.	The results of the benchmarks will be found in the output directory as stats.txt file. The required data
+		can be got from this file.
 	
