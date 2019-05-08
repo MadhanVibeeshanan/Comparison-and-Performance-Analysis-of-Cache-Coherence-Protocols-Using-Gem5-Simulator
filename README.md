@@ -1,6 +1,7 @@
 # Comparions-and-Performance-Analysis-of-Cache-Coherence-Protocols-Using-Gem5-Simulator
 
 # CSCI 5593 - Advanced Computer Architecture
+
 	Gem5 was installed and used on a dual boot Ubuntu OS during the project. 
 	You can also use Ubuntu in a VM, but building the binaries will take a lot of time.
 
@@ -42,8 +43,8 @@
 
 	2.	Build the ISA (we build X86 ISA):
 	
-			The number following -j represents the number of coresthat your system has. This build process will 
-		take around 20 minutes based on the number of cores that you have
+			The number following -j represents the number of coresthat your system has. 
+		This build process will take around 20 minutes based on the number of cores that you have.
 
 			scons build/X86/gem5.opt -j8
 	
@@ -86,8 +87,8 @@
 	
 			./build/X86/gem5.opt configs/example/memtest.py -h
 
-			The parameters -l, -c and -t can be varied as per requirement. But we used the following to test 
-			the classic model. 
+			The parameters -l, -c and -t can be varied as per requirement. But we used the following to 
+			test the classic model. 
  
  			./build/X86/gem5.opt configs/example/memtest.py -l 100000 -c 4:1 -t 3:2:1
 
@@ -144,8 +145,8 @@
 	3.	The run command will be found at the last line of the spec.sh file. Make changes like changing the 
 		l1d_size, l1i_size and so on here before running the shell script.
 
-	4.	Use the following command to run the spec.sh  file. Before running the script, make sure you are in the
-		correct directory (~/gem5/)
+	4.	Use the following command to run the spec.sh  file. Before running the script, make sure you are in 
+		the correct directory (~/gem5/)
 		
 			./spec.sh <name_of_benchmark> <output_directory>
 
@@ -153,6 +154,6 @@
 
 			The different benchmarks that can be used are leela, exchange2, imagick, povray and lbm.
 
-	5.	The results of the benchmarks will be found in the output directory as stats.txt file. The required data
-		can be got from this file.
+	5.	The results of the benchmarks will be found in the output directory as stats.txt file. The required 
+		data can be got from this file.
 	
