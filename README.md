@@ -64,7 +64,7 @@
 
 	3.	To run classic model on gem5 with different L1 cache size and block size.
 		a.	Open memtest.py found on the following directory: 
-**./configs/example/memtest.py**
+			**./configs/example/memtest.py**
 
 b.	Change the L1 cache size, found on line 183
 	Change sizes to one of these: 16kB,32kb,64kB and 128kB and follow step 4 and 5.
