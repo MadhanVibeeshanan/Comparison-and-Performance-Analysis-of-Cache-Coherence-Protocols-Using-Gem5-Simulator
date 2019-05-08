@@ -6,7 +6,7 @@
 
 	The link provided below will help you to install VM:
 	
-	https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/
+**https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/**
 
 # 2. Download Ubuntu 16.04:
 
